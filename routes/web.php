@@ -21,3 +21,19 @@ Route::get('testmodel',function(){
 	$c = App\modelPengaturan::all();
 	return $a . $b . $c;
 });
+
+//Latihan Controller
+Route::get('/test','MyController@percobaan');
+Route::get('/test2','MyController@percobaan2');
+Route::get('/test3','MyController@percobaan3');
+Route::get('/test4','MyController@percobaan4');
+Route::get('/test5','MyController@percobaan5');
+Route::get('/test6','MyController@percobaan6');
+Route::get('/test7','MyController@percobaan7');
+Route::get('/test8','MyController@percobaan8');
+
+
+Route::get('tes/{buah}/{makhluk_hidup}/{personal_komputer}',function($buah,$makhluk_hidup,$personal_kumputer)
+			{
+    			return $buah
+    		});
