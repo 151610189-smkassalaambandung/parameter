@@ -13,7 +13,7 @@
 				@endforeach</td>
 
 			<td><h1>Makhluk Hidup</h1></td>
-			<td>@foreach($makhluk_hidup as $data)
+			<td>@foreach($life as $data)
 					{{$data}}<hr>
 				@endforeach</td>
 

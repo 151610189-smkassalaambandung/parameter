@@ -49,9 +49,20 @@ class MyController extends Controller
 	public function percobaan7()
 	{
 		$buah          = ['Mangga','Jeruk','Apel','Anggur','Melon'];
-		$makhluk_hidup = ['Hewan','Manusia','Tumbuhan','Bakteri','Bio'];
+		$life          = ['Hewan','Manusia','Tumbuhan','Bakteri','Bio'];
 		$pc            = ['Mouse','Keyboard','Printer','Monitor','CPU'];
-		return view("latihan.gabungan",compact('buah','makhluk_hidup','pc'));
+		return view("latihan.gabungan",compact('buah','life','pc'));
 	}
 	//parameter
+		public function percobaan8($data)
+	{
+		$all = ['buah'=>['Mangga','Jeruk','Apel','Anggur','Melon'],
+		        'binatang'=>['Hewan','Manusia','Tumbuhan','Bakteri','Bio'],
+		        'pc'=>['Mouse','Keyboard','Printer','Monitor','CPU'],
+		        'kucing'=>['Anggora','Persia']];
+		        
+
+		$gabungan = $all[$data];
+		return view("parameter",compact('gabungan','data');
+	}
 }

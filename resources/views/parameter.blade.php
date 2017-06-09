@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Looping</title>
 </head>
 <body>
-
+	<center>
+		<tr>
+			<td><h1>Daftar : {{$data}}</h1></td>
+		    <td>@foreach($gabungan as $data)
+				{{$data}}<hr>
+			@endforeach</td>
+		</tr>
+	</center>
 </body>
 </html>

@@ -8,5 +8,6 @@
 		@foreach($buah as $data)
 			{{$data}}<hr>
 		@endforeach
+	</center>
 </body>
 </html>
