@@ -54,15 +54,29 @@ class MyController extends Controller
 		return view("latihan.gabungan",compact('buah','life','pc'));
 	}
 	//parameter
-		public function percobaan8($data)
+		public function percobaan8($data,$data2 = null)
 	{
-		$all = ['buah'=>['Mangga','Jeruk','Apel','Anggur','Melon'],
-		        'binatang'=>['Hewan','Manusia','Tumbuhan','Bakteri','Bio'],
-		        'pc'=>['Mouse','Keyboard','Printer','Monitor','CPU'],
-		        'kucing'=>['Anggora','Persia']];
-		        
+		$array = array('binatang' => ['kucing'=>['Persia','Anggora'],
+		        			   	      'hamster'=>['Hamtaro','Hamtari'],
+		        			 		  'kelinci'=>['White','Black'],
+		        			 		  'komodo'=>['Persia','Imortal']],
 
-		$gabungan = $all[$data];
-		return view("parameter",compact('gabungan','data');
+		        	   'buah'     => ['mangga'=>['Harumanis','Marijan'],
+		        		 			  'alpukat'=>['Hijau','Hitam'],
+		        		 			  'apel'=>['Fuji','Hejo']],
+
+		        	   'pc'		  => ['asus'=>['456UR','123'],
+		        	   		          'dell'=>['Alienware','Inspiron'],
+		        	   		          'acer'=>['6930','7780']]
+		       	       );
+		if ($data){
+			$query = (array_keys($array[$data]));
+		}
+		if ($data2){
+			$query = ($array[$data][$data2]);
+		}
+		return view("parameter",compact('query','data','data2'));
 	}
+
+
 }

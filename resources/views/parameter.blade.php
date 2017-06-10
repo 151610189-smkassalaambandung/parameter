@@ -7,7 +7,7 @@
 	<center>
 		<tr>
 			<td><h1>Daftar : {{$data}}</h1></td>
-		    <td>@foreach($gabungan as $data)
+		    <td>@foreach($query as $data)
 				{{$data}}<hr>
 			@endforeach</td>
 		</tr>
